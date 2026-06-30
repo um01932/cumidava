@@ -28,38 +28,6 @@ body {
   padding-top: var(--header-offset, 86px);
 }
 
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-repeat: repeat-y;
-}
-
-body::before {
-  z-index: 1;
-  opacity: 0.28;
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 6px, transparent 7.2px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.54) 0 4.8px, transparent 6.3px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 5.7px, transparent 6.9px);
-  background-size: 96px 130px, 84px 118px, 120px 160px;
-  background-position: 10% 102%, 56% 108%, 86% 105%;
-  animation: bubbleRise 7s linear infinite;
-}
-
-body::after {
-  z-index: 1;
-  opacity: 0.2;
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.46) 0 4.2px, transparent 5.7px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 3.6px, transparent 5.4px);
-  background-size: 70px 106px, 110px 140px;
-  background-position: 30% 110%, 72% 104%;
-  animation: bubbleRise 10s linear infinite;
-}
-
 .grain,
 .aura {
   position: fixed;
@@ -163,6 +131,70 @@ footer {
   border-radius: 1.2rem;
   background: var(--panel);
   backdrop-filter: blur(4px);
+}
+
+.hero-copy,
+.panel,
+.beer-card,
+.footer-contact-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-copy::before,
+.panel::before,
+.beer-card::before,
+.footer-contact-card::before,
+.hero-copy::after,
+.panel::after,
+.beer-card::after,
+.footer-contact-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: repeat-y;
+  z-index: 1;
+}
+
+.hero-copy::before,
+.panel::before,
+.beer-card::before,
+.footer-contact-card::before {
+  opacity: 0.36;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 6px, transparent 7.2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 5.7px, transparent 6.9px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.52) 0 4.8px, transparent 6.1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.46) 0 4.2px, transparent 5.4px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.58) 0 5.2px, transparent 6.4px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.5) 0 4.5px, transparent 5.8px);
+  background-size: 108px 150px, 94px 136px, 128px 170px, 82px 122px, 116px 162px, 76px 114px;
+  background-position: 4% 104%, 19% 110%, 37% 103%, 53% 112%, 71% 106%, 88% 109%;
+  animation: bubbleRise 7s linear infinite;
+}
+
+.hero-copy::after,
+.panel::after,
+.beer-card::after,
+.footer-contact-card::after {
+  opacity: 0.26;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.44) 0 4.2px, transparent 5.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.38) 0 3.8px, transparent 5.1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.36) 0 3.4px, transparent 4.8px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 3.9px, transparent 5.2px);
+  background-size: 88px 126px, 118px 152px, 96px 132px, 136px 176px;
+  background-position: 12% 113%, 33% 107%, 62% 111%, 84% 105%;
+  animation: bubbleRise 10s linear infinite;
+}
+
+.hero-copy > *,
+.panel > *,
+.beer-card > *,
+.footer-contact-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-copy {
@@ -295,8 +327,6 @@ main {
   padding: 1.2rem;
   transition: transform 0.22s ease, border-color 0.22s ease;
   animation: reveal 0.9s ease both;
-  position: relative;
-  overflow: hidden;
 }
 
 .beer-card:hover {
