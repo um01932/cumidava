@@ -95,7 +95,7 @@ footer {
   }
 
   .floating-header img {
-    max-height: 152px;
+    max-height: 128px;
     object-fit: contain;
   }
 
