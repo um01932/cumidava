@@ -263,6 +263,8 @@ main {
   padding: 1.2rem;
   transition: transform 0.22s ease, border-color 0.22s ease;
   animation: reveal 0.9s ease both;
+  position: relative;
+  overflow: hidden;
 }
 
 .beer-card:hover {
@@ -319,8 +321,63 @@ main {
   background: linear-gradient(145deg, rgba(244, 228, 188, 0.8), rgba(227, 201, 141, 0.6));
 }
 
+.pils::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  background-image:
+    radial-gradient(circle at 16% 24%, rgba(255, 255, 255, 0.62) 0 2px, transparent 2.6px),
+    radial-gradient(circle at 28% 14%, rgba(255, 255, 255, 0.48) 0 2.4px, transparent 3px),
+    radial-gradient(circle at 67% 22%, rgba(255, 255, 255, 0.5) 0 2px, transparent 2.7px),
+    radial-gradient(circle at 78% 10%, rgba(255, 255, 255, 0.46) 0 2.3px, transparent 3px),
+    radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.45) 0 1.8px, transparent 2.4px);
+  animation: condensationDrift 8.5s linear infinite;
+}
+
+.pils::after {
+  content: "";
+  position: absolute;
+  inset: -12% 0 auto 0;
+  height: 42%;
+  pointer-events: none;
+  opacity: 0.25;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55), transparent 75%);
+}
+
 .aipa {
   background: linear-gradient(145deg, rgba(250, 237, 206, 0.8), rgba(216, 186, 121, 0.62));
+}
+
+.aipa::before,
+.aipa::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: repeat-y;
+  opacity: 0.42;
+}
+
+.aipa::before {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 2px, transparent 2.4px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.54) 0 1.6px, transparent 2.1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 1.9px, transparent 2.3px);
+  background-size: 96px 130px, 84px 118px, 120px 160px;
+  background-position: 10% 102%, 56% 108%, 86% 105%;
+  animation: bubbleRise 7s linear infinite;
+}
+
+.aipa::after {
+  opacity: 0.3;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.46) 0 1.4px, transparent 1.9px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 1.2px, transparent 1.8px);
+  background-size: 70px 106px, 110px 140px;
+  background-position: 30% 110%, 72% 104%;
+  animation: bubbleRise 10s linear infinite;
 }
 
 .partner {
@@ -408,6 +465,24 @@ footer {
   to {
     transform: translateY(0) scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes condensationDrift {
+  from {
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 0 24px, 0 18px, 0 22px, 0 16px, 0 20px;
+  }
+}
+
+@keyframes bubbleRise {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-132px);
   }
 }
 
