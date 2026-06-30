@@ -83,6 +83,17 @@ footer {
   box-shadow: 0 10px 22px rgba(40, 24, 6, 0.18);
 }
 
+@media (min-width: 1024px) {
+  .floating-header {
+    width: min(930px, calc(100% - 2rem));
+  }
+
+  .floating-header img {
+    max-height: 170px;
+    object-fit: contain;
+  }
+}
+
 .hero {
   margin-top: 0;
   display: grid;
