@@ -84,9 +84,35 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  .site-header,
+  main,
+  footer {
+    width: min(1020px, calc(100% - 2rem));
+  }
+
+  .floating-header {
+    width: min(1020px, calc(100% - 2rem));
+  }
+
   .floating-header img {
-    max-height: 170px;
+    max-height: 152px;
     object-fit: contain;
+  }
+
+  .hero-copy {
+    padding: 1.9rem 2.1rem;
+  }
+
+  .panel {
+    padding: 1.3rem 1.45rem;
+  }
+
+  .beer-grid {
+    gap: 0.8rem;
+  }
+
+  .beer-card {
+    padding: 1rem;
   }
 }
 
