@@ -95,13 +95,12 @@ footer {
 .hero {
   margin-top: 1.4rem;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
-  align-items: stretch;
+  align-items: center;
 }
 
 .hero-copy,
-.hero-seal,
 .panel,
 .beer-card {
   border: 1px solid var(--line);
@@ -115,28 +114,27 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: rgba(245, 231, 201, 0.46);
+  background: rgba(245, 231, 201, 0.6);
   animation: reveal 0.8s ease both;
 }
 
-.hero-copy > * {
-  position: relative;
-  z-index: 2;
+.hero-banner {
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background: rgba(245, 231, 201, 0.55);
+  animation: reveal 0.75s ease both;
 }
 
-.hero-beer {
-  position: absolute;
-  right: -4%;
-  bottom: -12%;
-  width: min(44%, 340px);
-  max-height: 120%;
-  object-fit: contain;
-  opacity: 0.42;
-  filter: saturate(0.95) contrast(1.05);
-  z-index: 1;
-  pointer-events: none;
+.hero-banner img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-copy-center {
+  text-align: center;
+  align-items: center;
 }
 
 .eyebrow {
@@ -158,8 +156,8 @@ h3 {
 
 h1 {
   margin-top: 0.7rem;
-  font-size: clamp(2.2rem, 6.8vw, 5rem);
-  max-width: 11ch;
+  font-size: clamp(2rem, 6vw, 4.3rem);
+  max-width: 16ch;
 }
 
 .hero-copy p {
@@ -203,54 +201,6 @@ h1 {
   color: var(--night);
   border-color: var(--line);
   background: rgba(255, 247, 224, 0.55);
-}
-
-.hero-seal {
-  padding: 1.3rem;
-  animation: float-in 0.9s ease both;
-}
-
-.badge {
-  margin: 0;
-  display: inline-block;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.68rem;
-  font-weight: 700;
-}
-
-.hero-seal h2 {
-  margin-top: 0.8rem;
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-}
-
-.tagline {
-  margin-top: 0.2rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-.hero-seal dl {
-  margin: 0.8rem 0 0;
-  display: grid;
-  gap: 0.55rem;
-}
-
-.hero-seal div {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.8rem;
-  padding: 0.48rem 0.56rem;
-  border-radius: 0.65rem;
-  border: 1px dashed var(--line);
-  background: rgba(255, 245, 218, 0.5);
-}
-
-.hero-seal dt {
-  font-weight: 700;
 }
 
 main {
@@ -427,17 +377,6 @@ footer {
 }
 
 @media (max-width: 950px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-beer {
-    right: -6%;
-    bottom: -16%;
-    width: min(58%, 320px);
-    opacity: 0.36;
-  }
-
   .beer-grid {
     grid-template-columns: 1fr;
   }
@@ -458,7 +397,7 @@ footer {
   }
 
   .hero-copy,
-  .hero-seal,
+  .hero-banner,
   .panel,
   .beer-card {
     border-radius: 0.9rem;
