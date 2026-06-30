@@ -28,6 +28,38 @@ body {
   padding-top: var(--header-offset, 86px);
 }
 
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: repeat-y;
+}
+
+body::before {
+  z-index: 1;
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 6px, transparent 7.2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.54) 0 4.8px, transparent 6.3px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 5.7px, transparent 6.9px);
+  background-size: 96px 130px, 84px 118px, 120px 160px;
+  background-position: 10% 102%, 56% 108%, 86% 105%;
+  animation: bubbleRise 7s linear infinite;
+}
+
+body::after {
+  z-index: 1;
+  opacity: 0.2;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.46) 0 4.2px, transparent 5.7px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 3.6px, transparent 5.4px);
+  background-size: 70px 106px, 110px 140px;
+  background-position: 30% 110%, 72% 104%;
+  animation: bubbleRise 10s linear infinite;
+}
+
 .grain,
 .aura {
   position: fixed;
@@ -321,63 +353,8 @@ main {
   background: linear-gradient(145deg, rgba(244, 228, 188, 0.8), rgba(227, 201, 141, 0.6));
 }
 
-.pils::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.34;
-  background-image:
-    radial-gradient(circle at 16% 24%, rgba(255, 255, 255, 0.62) 0 6px, transparent 7.8px),
-    radial-gradient(circle at 28% 14%, rgba(255, 255, 255, 0.48) 0 7.2px, transparent 9px),
-    radial-gradient(circle at 67% 22%, rgba(255, 255, 255, 0.5) 0 6px, transparent 8.1px),
-    radial-gradient(circle at 78% 10%, rgba(255, 255, 255, 0.46) 0 6.9px, transparent 9px),
-    radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.45) 0 5.4px, transparent 7.2px);
-  animation: condensationDrift 8.5s linear infinite;
-}
-
-.pils::after {
-  content: "";
-  position: absolute;
-  inset: -12% 0 auto 0;
-  height: 42%;
-  pointer-events: none;
-  opacity: 0.25;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55), transparent 75%);
-}
-
 .aipa {
   background: linear-gradient(145deg, rgba(250, 237, 206, 0.8), rgba(216, 186, 121, 0.62));
-}
-
-.aipa::before,
-.aipa::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-repeat: repeat-y;
-  opacity: 0.42;
-}
-
-.aipa::before {
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 6px, transparent 7.2px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.54) 0 4.8px, transparent 6.3px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 5.7px, transparent 6.9px);
-  background-size: 96px 130px, 84px 118px, 120px 160px;
-  background-position: 10% 102%, 56% 108%, 86% 105%;
-  animation: bubbleRise 7s linear infinite;
-}
-
-.aipa::after {
-  opacity: 0.3;
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.46) 0 4.2px, transparent 5.7px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 3.6px, transparent 5.4px);
-  background-size: 70px 106px, 110px 140px;
-  background-position: 30% 110%, 72% 104%;
-  animation: bubbleRise 10s linear infinite;
 }
 
 .partner {
@@ -465,15 +442,6 @@ footer {
   to {
     transform: translateY(0) scale(1);
     opacity: 1;
-  }
-}
-
-@keyframes condensationDrift {
-  from {
-    background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
-  }
-  to {
-    background-position: 0 24px, 0 18px, 0 22px, 0 16px, 0 20px;
   }
 }
 
