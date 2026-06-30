@@ -25,6 +25,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  padding-top: clamp(120px, 15vw, 220px);
 }
 
 .grain,
@@ -57,43 +58,29 @@ footer {
   z-index: 2;
 }
 
-.nav-shell {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
+.floating-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0.65rem auto 0;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(242, 223, 184, 0.7);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background: rgba(245, 231, 201, 0.78);
   backdrop-filter: blur(6px);
+  box-shadow: 0 12px 26px rgba(40, 24, 6, 0.2);
 }
 
-.brand {
-  text-decoration: none;
-  color: var(--night);
-  font-family: "Cinzel", serif;
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.1rem;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--ink);
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
+.floating-header img {
+  width: 100%;
+  display: block;
 }
 
 .hero {
-  margin-top: 1.4rem;
+  margin-top: 0.6rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -116,20 +103,6 @@ footer {
   justify-content: center;
   background: rgba(245, 231, 201, 0.6);
   animation: reveal 0.8s ease both;
-}
-
-.hero-banner {
-  border: 1px solid var(--line);
-  border-radius: 1.2rem;
-  overflow: hidden;
-  background: rgba(245, 231, 201, 0.55);
-  animation: reveal 0.75s ease both;
-}
-
-.hero-banner img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .hero-copy-center {
@@ -389,15 +362,13 @@ footer {
     width: min(1160px, calc(100% - 1rem));
   }
 
-  .nav-shell {
-    border-radius: 1rem;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.7rem;
+  .floating-header {
+    width: min(1160px, calc(100% - 1rem));
+    border-radius: 0.9rem;
+    margin-top: 0.5rem;
   }
 
   .hero-copy,
-  .hero-banner,
   .panel,
   .beer-card {
     border-radius: 0.9rem;
