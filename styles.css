@@ -163,14 +163,11 @@ footer {
 .footer-contact-card::before {
   opacity: 0.36;
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 6px, transparent 7.2px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 5.7px, transparent 6.9px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.52) 0 4.8px, transparent 6.1px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.46) 0 4.2px, transparent 5.4px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.58) 0 5.2px, transparent 6.4px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.5) 0 4.5px, transparent 5.8px);
-  background-size: 108px 150px, 94px 136px, 128px 170px, 82px 122px, 116px 162px, 76px 114px;
-  background-position: 4% 104%, 19% 110%, 37% 103%, 53% 112%, 71% 106%, 88% 109%;
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 12px, transparent 14.4px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 11.4px, transparent 13.8px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.52) 0 9.6px, transparent 12.2px);
+  background-size: 162px 225px, 192px 255px, 174px 243px;
+  background-position: 10% 104%, 45% 109%, 80% 106%;
   animation: bubbleRise 7s linear infinite;
 }
 
@@ -180,12 +177,10 @@ footer {
 .footer-contact-card::after {
   opacity: 0.26;
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.44) 0 4.2px, transparent 5.5px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.38) 0 3.8px, transparent 5.1px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.36) 0 3.4px, transparent 4.8px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 3.9px, transparent 5.2px);
-  background-size: 88px 126px, 118px 152px, 96px 132px, 136px 176px;
-  background-position: 12% 113%, 33% 107%, 62% 111%, 84% 105%;
+    radial-gradient(circle, rgba(255, 255, 255, 0.44) 0 8.4px, transparent 11px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.38) 0 7.6px, transparent 10.2px);
+  background-size: 176px 252px, 204px 264px;
+  background-position: 24% 113%, 70% 107%;
   animation: bubbleRise 10s linear infinite;
 }
 
