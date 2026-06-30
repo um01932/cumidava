@@ -3,93 +3,147 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cumidava | Bere cu origini dacice</title>
+    <title>Cumidava | Bere locală artizanală</title>
     <meta
       name="description"
-      content="Cumidava este o bere artizanală inspirată de spiritul locului. Descoperă gustul, povestea și experiența unei mărci românești autentice."
+      content="Cumidava este o bere locală artizanală din Râșnov, cu sortimente PILS și HELLES, produsă în parteneriat cu Pardon Brewery."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Spectral:opsz,wght@9..72,400;9..72,600;9..72,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Albert+Sans:wght@400;500;700&family=Cinzel:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-noise" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="aura" aria-hidden="true"></div>
 
-    <header class="hero">
-      <nav class="nav">
+    <header class="site-header" id="top">
+      <nav class="nav-shell">
         <a class="brand" href="#top">CUMIDAVA</a>
-        <a class="nav-link" href="#despre">Despre</a>
-        <a class="nav-link" href="#sortimente">Sortimente</a>
-        <a class="nav-link" href="#contact">Contact</a>
+        <div class="nav-links">
+          <a href="#poveste">Poveste</a>
+          <a href="#sortimente">Sortimente</a>
+          <a href="#partener">Partener</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
 
-      <section class="hero-content" id="top">
-        <p class="overline">Născută în inima Carpaților</p>
-        <h1>Bere cu <span>caracter</span>,
-          poveste și spumă cinstită.</h1>
-        <p class="hero-text">
-          Cumidava este un proiect de brand de bere premium românească, inspirat de
-          vechea cetate dacică și de cultura locală. Acesta este un draft de prezentare.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#sortimente">Vezi sortimente</a>
-          <a class="btn btn-secondary" href="#contact">Parteneriate</a>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">RÂȘNOV, ROMÂNIA</p>
+          <h1>Berea care poartă spiritul vechii Cumidava.</h1>
+          <p>
+            O pagină de prezentare pentru un brand local cu prezență puternică, inspirat de
+            eticheta PILS și construit pentru lansare. Vizualul combină identitatea istorică cu
+            un ton premium modern.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-gold" href="#sortimente">Descoperă sortimentele</a>
+            <a class="btn btn-ghost" href="#partener">Parteneriat</a>
+          </div>
         </div>
+
+        <aside class="hero-seal" aria-label="Date principale Cumidava Pils">
+          <p class="badge">Ediție de prezentare</p>
+          <h2>CUMIDAVA PILS</h2>
+          <p class="tagline">nefiltrată, nepasteurizată</p>
+          <dl>
+            <div>
+              <dt>ABV</dt>
+              <dd>5% ± 0,5%</dd>
+            </div>
+            <div>
+              <dt>EP</dt>
+              <dd>12,2 ± 0,5°P</dd>
+            </div>
+            <div>
+              <dt>Volum</dt>
+              <dd>330 ml</dd>
+            </div>
+          </dl>
+        </aside>
       </section>
     </header>
 
     <main>
-      <section class="about" id="despre">
-        <div>
-          <p class="section-kicker">Identitate</p>
-          <h2>Un brand local construit pe tradiție și rafinament.</h2>
-        </div>
+      <section class="story panel" id="poveste">
+        <p class="eyebrow">Origini</p>
+        <h2>Din cetate în pahar: poveste locală, gust memorabil.</h2>
         <p>
-          Numele Cumidava evocă rădăcinile istorice ale zonei și aduce într-un pahar un stil
-          contemporan de bere: ingrediente curate, fermentație atentă și un profil aromatic
-          memorabil. Pagina aceasta este versiunea 0.1, pregătită pentru lansare rapidă.
+          Cumidava preia energia cetății și o traduce într-o bere blondă clară ca intenție:
+          ingrediente curate, fermentație controlată, profil aromatic luminos și un final sec,
+          elegant. Este o identitate care unește istoria zonei cu cultura berii artizanale.
         </p>
       </section>
 
-      <section class="products" id="sortimente">
-        <p class="section-kicker">Draft lineup</p>
-        <div class="cards">
-          <article class="card">
-            <h3>Cumidava Blondă</h3>
-            <p>Lejeră, florală, cu final crocant și o amăreală echilibrată.</p>
-            <span>ABV 5.0%</span>
+      <section class="range" id="sortimente">
+        <div class="range-head">
+          <p class="eyebrow">Sortimente</p>
+          <h2>Două expresii. Același caracter Cumidava.</h2>
+        </div>
+
+        <div class="beer-grid">
+          <article class="beer-card pils">
+            <p class="beer-type">Flagship</p>
+            <h3>PILS</h3>
+            <p>
+              Inspirată de eticheta originală: blondă, nefiltrată, nepasteurizată, cu amăreală
+              fină și final curat.
+            </p>
+            <ul>
+              <li>Ingrediente: apă, malț de orz, hamei, drojdie</li>
+              <li>Valabilitate: 90 zile la 2-6 °C</li>
+              <li>Profil: floral, crisp, mineral</li>
+            </ul>
+            <span>5% alc. vol.</span>
           </article>
-          <article class="card">
-            <h3>Cumidava Arămie</h3>
-            <p>Malț caramel, note de pâine prăjită și o textură catifelată.</p>
-            <span>ABV 5.8%</span>
-          </article>
-          <article class="card">
-            <h3>Cumidava Neagră</h3>
-            <p>Cafea, cacao și un final sec care invită la încă un pahar.</p>
-            <span>ABV 6.2%</span>
+
+          <article class="beer-card helles">
+            <p class="beer-type">Nou</p>
+            <h3>HELLES</h3>
+            <p>
+              Versiune mai rotundă și catifelată: malț dominant, corp mediu, amăreală discretă,
+              foarte prietenoasă pentru consum repetat.
+            </p>
+            <ul>
+              <li>Stil: lager bavarez reinterpretat local</li>
+              <li>Profil: pâine albă, miere, iarbă proaspătă</li>
+              <li>Final: neted, echilibrat, elegant</li>
+            </ul>
+            <span>ABV orientativ 4,8-5,2%</span>
           </article>
         </div>
       </section>
 
-      <section class="contact" id="contact">
-        <p class="section-kicker">Următorii pași</p>
-        <h2>Pregătit pentru lansare pe GitHub Pages</h2>
+      <section class="partner panel" id="partener">
+        <p class="eyebrow">Producător & partener</p>
+        <h2>Pardon Brewery</h2>
         <p>
-          Înlocuiește textele, adaugă fotografii de produs și detalii comerciale,
-          apoi publică automat pe domeniul tău.
+          Cumidava este produsă în parteneriat cu Pardon Brewery, cu accent pe consistență,
+          execuție tehnică și control de calitate la nivel de micro-berărie premium.
         </p>
-        <a class="btn btn-primary" href="mailto:contact@cumidava.com">contact@cumidava.com</a>
+        <a class="btn btn-gold" href="https://pardonbrewery.ro/" target="_blank" rel="noreferrer">
+          Vizitează pardonbrewery.ro
+        </a>
+      </section>
+
+      <section class="contact panel" id="contact">
+        <p class="eyebrow">Disponibilitate</p>
+        <h2>Hai să lansăm Cumidava în forță.</h2>
+        <p>
+          Pentru distribuție, colaborări HoReCa sau evenimente de brand, scrie-ne direct.
+        </p>
+        <a class="btn btn-ghost" href="mailto:contact@cumidava.com">contact@cumidava.com</a>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 Cumidava. Toate drepturile rezervate.</p>
-      <p class="age">18+ Consumă responsabil.</p>
+      <p>© 2026 Cumidava</p>
+      <p>Râșnov, România</p>
+      <p>18+ Consumă responsabil</p>
     </footer>
   </body>
 </html>
