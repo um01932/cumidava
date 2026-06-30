@@ -14,12 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Albert+Sans:wght@400;500;700&family=Cinzel:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="Logo.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
     <div class="aura" aria-hidden="true"></div>
     <div class="floating-header" aria-label="Header Cumidava fix">
+      <div class="title-bar" aria-label="Title bar Cumidava">
+        <img src="Logo.png" alt="Logo Cumidava" />
+      </div>
       <img src="Header.png" alt="Header Cumidava" />
     </div>
 
@@ -116,5 +120,25 @@
       <p>Râșnov, România</p>
       <p>18+ Consumă responsabil</p>
     </footer>
+
+    <script>
+      (function () {
+        var header = document.querySelector('.floating-header');
+        if (!header) {
+          return;
+        }
+
+        function updateHeaderState() {
+          if (window.scrollY > 26) {
+            header.classList.add('is-compact');
+          } else {
+            header.classList.remove('is-compact');
+          }
+        }
+
+        updateHeaderState();
+        window.addEventListener('scroll', updateHeaderState, { passive: true });
+      })();
+    </script>
   </body>
 </html>
