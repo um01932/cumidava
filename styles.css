@@ -328,11 +328,11 @@ main {
   pointer-events: none;
   opacity: 0.34;
   background-image:
-    radial-gradient(circle at 16% 24%, rgba(255, 255, 255, 0.62) 0 2px, transparent 2.6px),
-    radial-gradient(circle at 28% 14%, rgba(255, 255, 255, 0.48) 0 2.4px, transparent 3px),
-    radial-gradient(circle at 67% 22%, rgba(255, 255, 255, 0.5) 0 2px, transparent 2.7px),
-    radial-gradient(circle at 78% 10%, rgba(255, 255, 255, 0.46) 0 2.3px, transparent 3px),
-    radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.45) 0 1.8px, transparent 2.4px);
+    radial-gradient(circle at 16% 24%, rgba(255, 255, 255, 0.62) 0 6px, transparent 7.8px),
+    radial-gradient(circle at 28% 14%, rgba(255, 255, 255, 0.48) 0 7.2px, transparent 9px),
+    radial-gradient(circle at 67% 22%, rgba(255, 255, 255, 0.5) 0 6px, transparent 8.1px),
+    radial-gradient(circle at 78% 10%, rgba(255, 255, 255, 0.46) 0 6.9px, transparent 9px),
+    radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.45) 0 5.4px, transparent 7.2px);
   animation: condensationDrift 8.5s linear infinite;
 }
 
@@ -362,9 +362,9 @@ main {
 
 .aipa::before {
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 2px, transparent 2.4px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.54) 0 1.6px, transparent 2.1px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 1.9px, transparent 2.3px);
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 6px, transparent 7.2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.54) 0 4.8px, transparent 6.3px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 5.7px, transparent 6.9px);
   background-size: 96px 130px, 84px 118px, 120px 160px;
   background-position: 10% 102%, 56% 108%, 86% 105%;
   animation: bubbleRise 7s linear infinite;
@@ -373,8 +373,8 @@ main {
 .aipa::after {
   opacity: 0.3;
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.46) 0 1.4px, transparent 1.9px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 1.2px, transparent 1.8px);
+    radial-gradient(circle, rgba(255, 255, 255, 0.46) 0 4.2px, transparent 5.7px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 3.6px, transparent 5.4px);
   background-size: 70px 106px, 110px 140px;
   background-position: 30% 110%, 72% 104%;
   animation: bubbleRise 10s linear infinite;
