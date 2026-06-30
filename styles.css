@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
-  padding-top: clamp(145px, 18vw, 250px);
+  padding-top: var(--header-offset, clamp(190px, 24vw, 320px));
 }
 
 .grain,
@@ -102,7 +102,7 @@ footer {
 }
 
 .hero {
-  margin-top: 0.6rem;
+  margin-top: 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
