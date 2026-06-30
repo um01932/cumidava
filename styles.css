@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
-  padding-top: var(--header-offset, clamp(190px, 24vw, 320px));
+  padding-top: var(--header-offset, 86px);
 }
 
 .grain,
@@ -67,7 +67,7 @@ footer {
   width: min(1160px, calc(100% - 2rem));
   margin: 0.65rem auto 0;
   border: 1px solid var(--line);
-  border-radius: 1.2rem;
+  border-radius: 999px;
   overflow: hidden;
   background: rgba(245, 231, 201, 0.24);
   backdrop-filter: blur(10px);
@@ -85,15 +85,23 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.55rem;
   padding: 0.35rem 0.7rem;
-  border-bottom: 1px solid var(--line);
   background: rgba(238, 222, 186, 0.26);
 }
 
 .title-bar img {
-  width: min(220px, 52vw);
-  height: 46px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
+}
+
+.title-bar span {
+  font-family: "Cinzel", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--night);
 }
 
 .floating-header img {
@@ -386,7 +394,7 @@ footer {
 
   .floating-header {
     width: min(1160px, calc(100% - 1rem));
-    border-radius: 0.9rem;
+    border-radius: 999px;
     margin-top: 0.5rem;
   }
 
@@ -395,8 +403,12 @@ footer {
   }
 
   .title-bar img {
-    width: min(180px, 60vw);
-    height: 40px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .title-bar span {
+    font-size: 0.88rem;
   }
 
   .hero-copy,
