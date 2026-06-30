@@ -303,24 +303,6 @@ main {
   max-width: 65ch;
 }
 
-.contact-inline {
-  margin: 0.4rem 0 1rem;
-  display: grid;
-  gap: 0.35rem;
-}
-
-.contact-inline p {
-  margin: 0;
-  font-size: 0.98rem;
-}
-
-.contact-inline a {
-  color: #f4d8a0;
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 1px dashed rgba(244, 216, 160, 0.7);
-}
-
 .partner .btn-gold {
   margin-top: 0.4rem;
 }
@@ -339,6 +321,26 @@ footer {
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+.footer-contacts {
+  width: 100%;
+  display: grid;
+  gap: 0.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.footer-contacts p {
+  margin: 0;
+  font-size: 0.93rem;
+  letter-spacing: normal;
+  font-weight: 600;
+}
+
+.footer-contacts a {
+  color: var(--night);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(23, 18, 13, 0.45);
 }
 
 @keyframes reveal {
